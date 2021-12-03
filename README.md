@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="./public/images/favicon.png" alt="Planner" width="250" height="250" />
+</p>
+<p align="center">
+Get more done with Keeper. 
+<br />
+Manage, capture and edit your daily notes.
+</p>
 
-## Available Scripts
+# Introduction
 
-In the project directory, you can run:
+Planner is a full stack web application built in MERN stack to keep a track of your activity every month, every day, every hour.
 
-### `npm start`
+-   **Runtime used in backend** - [Node.js](https://nodejs.org/)
+-   **Frontend framework** - [React JS](https://reactjs.org/)
+-   **CSS preprocessor** - [SASS](https://sass-lang.com/)
+-   **Backend framework** - [Express](https://expressjs.com/)
 
-Runs the app in the development mode.\
+# Themes
+
+Keeper's color palette has been synchronized and carefully chosen to provide the best user experince.
+
+The app will switch to dark mode automatically after 8:00 PM and will switch back to light mode at 8:00 AM.
+
+Though the user can still switch between different modes as per their convenience.
+
+To switch between different modes, click on theme icon in the header.
+
+-   **Light Mode**
+
+<img src="./src/images/PlannerNav/2b.png" alt="Dark Mode" style="margin: 2rem 7rem" />
+
+-   **Dark Mode**
+
+<img src="./src/images/PlannerNav/2a.png" alt="Light Mode" style="margin: 2rem 7rem" />
+
+# Development
+
+To clone copy the following command in your terminal and start development.
+
+```sh
+git clone https://github.com/akshatmittal61/keeper.git
+```
+
+cd into the directory
+
+```sh
+cd keeper
+```
+
+Install all the dependencies
+```sh
+npm i
+```
+
+Run the project in development mode
+
+```sh
+npm run react
+```
+
+Run the backend server
+
+```sh
+npm run server
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Author
 
-### `npm test`
+[Akshat Mittal](https://akshatmittal61.github.io/portfolio)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## References and Libraries Used
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [Google Keep](https://keep.google.com)
+-   [Axios](https://axios-http.com/)
