@@ -2,9 +2,9 @@ import React from 'react'
 import axios from 'axios';
 import Header from './components/Header'
 import Home from './pages/Home'
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Add from './pages/Add';
-import Edit from './pages/Edit';
+import Contact from './pages/Contact';
 
 const App = () => {
     const axiosInstance = axios.create({
@@ -17,7 +17,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Home axiosInstance={axiosInstance} />} />
                     <Route path='/add' element={<Add axiosInstance={axiosInstance} />} />
-                    <Route path='/edit' element={<Edit axiosInstance={axiosInstance} />} />
+                    <Route path='/contact' element={<Contact />} />
                 </Routes>
             </main>
         </Router>

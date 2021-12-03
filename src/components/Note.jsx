@@ -2,7 +2,7 @@ import React from 'react'
 
 const Note = ({ pop, note, onCopy, onDelete }) => {
     return (
-        <div className="note">
+        <div className="note" style={{ backgroundColor: note.color }}>
             <div className="note-head" onClick={pop}>
                 <div className="note-title">
                     {note.title}

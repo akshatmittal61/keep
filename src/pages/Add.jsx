@@ -16,7 +16,8 @@ const Add = ({ axiosInstance }) => {
     }
     const [note, setNote] = useState({
         title: '',
-        content: ''
+        content: '',
+        color: ''
     });
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -60,7 +61,15 @@ const Add = ({ axiosInstance }) => {
                         placeholder="Content"
                         rows="10"
                     ></textarea>
-                    <Button text="Add Note" color="blue" type="submit" />
+                    <input
+                        value={note.color}
+                        onChange={handleChange}
+                        name="color"
+                        className="add-form__input"
+                        type="color"
+                        placeholder="Color"
+                    />
+                    <Button text="Add Note" type="submit" />
                 </form>
             </div>
         </section>

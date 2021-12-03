@@ -53,6 +53,15 @@ const Home = ({ axiosInstance }) => {
                     </ResponsiveMasonry>
                 </div>
                 {
+                    allNotes.length === 0 && (
+                        <div className="notes-null">
+                            No notes yet...
+                            <br />
+                            Click on Add button to add a new note
+                        </div>
+                    )
+                }
+                {
                     popupNoteBox >= 0 && <NotePopup
                         note={allNotes[popupNoteBox]}
                         close={() => { setPopupNoteBox(-1) }}
