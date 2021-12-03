@@ -4,14 +4,14 @@
 <img src="./public/images/favicon.png" alt="Planner" width="250" height="250" />
 </p>
 <p align="center">
-Get more done with Keeper. 
+Get more done with Keep. 
 <br />
 Manage, capture and edit your daily notes.
 </p>
 
 # Introduction
 
-Planner is a full stack web application built in MERN stack to keep a track of your activity every month, every day, every hour.
+Keep is a full stack web application built in MERN stack to keep a track of your activity every month, every day, every hour.
 
 -   **Runtime used in backend** - [Node.js](https://nodejs.org/)
 -   **Frontend framework** - [React JS](https://reactjs.org/)
@@ -28,26 +28,18 @@ Though the user can still switch between different modes as per their convenienc
 
 To switch between different modes, click on theme icon in the header.
 
--   **Light Mode**
-
-<img src="./src/images/PlannerNav/2b.png" alt="Dark Mode" style="margin: 2rem 7rem" />
-
--   **Dark Mode**
-
-<img src="./src/images/PlannerNav/2a.png" alt="Light Mode" style="margin: 2rem 7rem" />
-
 # Development
 
 To clone copy the following command in your terminal and start development.
 
 ```sh
-git clone https://github.com/akshatmittal61/keeper.git
+git clone https://github.com/akshatmittal61/keep.git
 ```
 
 cd into the directory
 
 ```sh
-cd keeper
+cd keep
 ```
 
 Install all the dependencies
