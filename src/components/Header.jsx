@@ -16,6 +16,21 @@ const Header = () => {
                         <Theme />
                     </div>
                     <div className="header-right-link">
+                        <Link to='/' className="contact-us">
+                            <span className="material-icons">home</span>
+                        </Link>
+                    </div>
+                    <div className="header-right-link">
+                        <Link to='/about' className="contact-us">
+                            <span className="material-icons">info</span>
+                        </Link>
+                    </div>
+                    <div className="header-right-link">
+                        <Link to='/add' className="contact-us">
+                            <span className="material-icons">add</span>
+                        </Link>
+                    </div>
+                    <div className="header-right-link">
                         <Link to='/contact' className="contact-us">
                             <span className="material-icons">account_circle</span>
                         </Link>

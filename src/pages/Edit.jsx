@@ -1,27 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "../components/Button";
 
-const Add = ({ axiosInstance }) => {
+const Edit = ({
+	noteToEdit = { title: "", content: "", color: "" },
+	axiosInstance,
+}) => {
 	useEffect(() => {
 		getNotes();
 	}, []);
+	const { id } = useParams();
 	const navigate = useNavigate();
-	const [allNotes, setAllNotes] = useState([]);
+	const [allNotes, setAllNotes] = useState([
+		{
+			title: "",
+			content: "",
+			color: "",
+		},
+	]);
+	const [note, setNote] = useState({
+		title: noteToEdit.title,
+		content: noteToEdit.content,
+		color: noteToEdit.color,
+	});
 	async function getNotes() {
 		await axiosInstance
 			.get("/notes")
 			.then((res) => {
 				setAllNotes([...res.data]);
-				console.log(res.data);
+				setNote({
+					...res.data[id],
+				});
 			})
 			.catch((err) => console.log(err));
 	}
-	const [note, setNote] = useState({
-		title: "",
-		content: "",
-		color: "",
-	});
+	console.log(id);
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setNote({
@@ -31,29 +44,28 @@ const Add = ({ axiosInstance }) => {
 	};
 	const handleSubmit = (e) => {
 		let newNote = {
-			id: allNotes.length,
+			id: id,
 			...note,
 		};
 		e.preventDefault();
 		const condition = newNote.title === "" && newNote.content === "";
 		if (!condition) {
 			axiosInstance
-				.post("/add", newNote)
+				.patch(`/edit/${id}`, newNote)
 				.then((res) => console.log(res.data))
 				.catch((err) => console.log(err));
-			getNotes();
 			navigate("/");
 		}
 	};
 	return (
-		<section className="add">
-			<div className="add-container">
-				<form className="add-form" onSubmit={handleSubmit}>
+		<section className="edit">
+			<div className="edit-container">
+				<form className="edit-form" onSubmit={handleSubmit}>
 					<input
 						value={note.title}
 						onChange={handleChange}
 						name="title"
-						className="add-form__input"
+						className="edit-form__input"
 						type="text"
 						placeholder="Title"
 					/>
@@ -61,7 +73,7 @@ const Add = ({ axiosInstance }) => {
 						value={note.content}
 						onChange={handleChange}
 						name="content"
-						className="add-form__input"
+						className="edit-form__input"
 						type="text"
 						placeholder="Content"
 						rows="10"
@@ -70,15 +82,15 @@ const Add = ({ axiosInstance }) => {
 						value={note.color}
 						onChange={handleChange}
 						name="color"
-						className="add-form__input"
+						className="edit-form__input"
 						type="color"
 						placeholder="Color"
 					/>
-					<Button text="Add Note" type="submit" />
+					<Button text="Save Note" type="submit" />
 				</form>
 			</div>
 		</section>
 	);
 };
 
-export default Add;
+export default Edit;
